@@ -10,7 +10,9 @@ type Props = {
   className: string,
 }
 export default function Button(props) {
-  const { children, type, variant, size, className, ...rest }: Props = props
+  const { children,
+    type, variant,
+    size, className, ...rest }: Props = props
   
   const classNames = ButtonVariant[variant] + "" + ButtonSize[size] + " " + className
   return (
