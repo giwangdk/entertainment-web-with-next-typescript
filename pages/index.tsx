@@ -1,6 +1,8 @@
+import Sidebar from "../components/Sidebar"
+
 const IndexPage = () => (
-  <div className='bg-slate-900'>
-    <h1 className='bg-slate-900'>haiii</h1> 
+  <div >
+    <Sidebar />
   </div>
 )
 
