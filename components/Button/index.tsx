@@ -14,6 +14,6 @@ export default function Button(props) {
   
   const classNames = ButtonVariant[variant] + "" + ButtonSize[size] + " " + className
   return (
-    <button type={type} className={classNames}  {...rest}>Button</button>
+    <button type={type} className={classNames}  {...rest}>{children}</button>
   )
 }
