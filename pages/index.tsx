@@ -1,9 +1,11 @@
+import CardMovie from "../components/CardMovie"
+import Layout from "../components/Layout"
 import Sidebar from "../components/Sidebar"
 
 const IndexPage = () => (
-  <div >
-    <Sidebar />
-  </div>
+  <Layout >
+    <CardMovie />
+  </Layout>
 )
 
 export default IndexPage
