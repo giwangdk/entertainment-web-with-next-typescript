@@ -1,11 +1,10 @@
 import CardMovie from "../components/CardMovie"
-import CardThumbnail from "../components/CardThumbnail"
 import Layout from "../components/Layout"
-import Sidebar from "../components/Sidebar"
+import Trending from "../components/Trending"
 
 const IndexPage = () => (
   <Layout >
-    <CardThumbnail />
+    <Trending />
     <CardMovie />
   </Layout>
 )

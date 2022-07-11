@@ -17,7 +17,7 @@ function CardThumbnail() {
   }
 
   return (
-      <div className=" relative max-w-[470px]" >
+      <div className=" relative" >
           <div className="rounded-xl" onMouseOver={ImageMouseOverHandler} onMouseLeave={ImageMouseOutHandler}>
           <Image src={Movie} className="rounded-xl object-fit" width="470" height="230" />
           <PlayButton show={show} className= "absolute top-1/3 left-1/3 transition-all ease-in delay-150 hover:scale-110 duration-200" />
