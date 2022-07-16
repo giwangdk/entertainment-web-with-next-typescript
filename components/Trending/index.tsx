@@ -8,18 +8,24 @@ import CardMovie from '../CardMovie';
 
 function Trending() {
   return (
+    <div className="w-full">
+
     <Swiper
-      slidesPerView={2}
-      spaceBetween={10}
+      slidesPerView={"auto"}
+      spaceBetween={30}
       scrollbar={{ draggable: true }}
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}
     >
       <SwiperSlide><CardThumbnail /></SwiperSlide>
-      <SwiperSlide><CardMovie /></SwiperSlide>
+      <SwiperSlide><CardThumbnail /></SwiperSlide>
+      <SwiperSlide><CardThumbnail /></SwiperSlide>
+
+      <SwiperSlide><CardThumbnail /></SwiperSlide>
       <SwiperSlide><CardThumbnail /></SwiperSlide>
       <SwiperSlide><CardThumbnail /></SwiperSlide>
     </Swiper>
+    </div>
   )
 }
 
