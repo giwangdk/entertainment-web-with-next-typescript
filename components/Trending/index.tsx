@@ -10,7 +10,7 @@ function Trending() {
     <div className="w-full">
 
       <Swiper
-        slidesPerView="auto"
+        slidesPerView={3}
         spaceBetween={30}
         scrollbar={{ draggable: true }}
         onSlideChange={() => console.log('slide change')}
