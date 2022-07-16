@@ -23,14 +23,7 @@ export const  Button = (props) => {
 }
 
 export const PlayButton = (props) =>{
-  const { className, show }: { className: string, show:boolean } = props
+  const { className }: { className: string } = props
   const classNames = `pl-2 pr-5 py-1 rounded-full text-white font-bold flex items-center text-lg` + " " + className + " " + styles.play
-
-    if (show) {
       return (<button className={classNames}><AiFillPlayCircle size={35} className="mr-2" />Play</button>)
-    } else {
-      return (
-        <></>
-      )
-    }
 }
