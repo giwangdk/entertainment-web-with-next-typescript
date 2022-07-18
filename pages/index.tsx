@@ -2,26 +2,28 @@ import { GetStaticProps } from 'next'
 import CardMovie from '../components/CardMovie'
 import Layout from '../components/Layout'
 import Trending from '../components/Trending'
-import { getComingSoon } from '../utils/imd'
+import { Movie } from '../interfaces'
+import { getWithoutHeader } from '../utils/api'
 
-function IndexPage({ comingSoon }) {
-  console.log(comingSoon)
+const API_URL = process.env.IMDB_API_URL;
+const API_KEY = process.env.IMDB_API_KEY;
+
+function IndexPage({ comingSoon }: { comingSoon: Movie[] }) {
   return (
     <Layout>
-      <Trending />
+      <Trending movies={comingSoon} />
       <CardMovie />
     </Layout>
   )
 }
 
 export const getStaticProps:GetStaticProps = async () => {
-  const res = await getComingSoon();
-  const comingSoon = res.data.data;
-  console.log(res)
+  const res = await getWithoutHeader(`${API_URL}/Top250TVs/${API_KEY}`);
+  const comingSoon:Movie[] = await res.data.items;
   return {
     props: {
       comingSoon
-    },
+    }
   }
 }
 export default IndexPage

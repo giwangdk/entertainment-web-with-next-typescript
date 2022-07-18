@@ -7,4 +7,4 @@ export const getTop250Movies = getWithoutHeader(`${API_URL}/Top250Movies/${API_K
 
 export const getTop250TVs = getWithoutHeader(`${API_URL}/Top250TVs/${API_KEY}`);
 
-export const getComingSoon = getWithoutHeader(`${API_URL}/Top250TVs/${API_KEY}`) as Record<string, any>;
+export const getComingSoon = getWithoutHeader(`${API_URL}/Top250TVs/${API_KEY}`);

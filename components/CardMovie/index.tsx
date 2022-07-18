@@ -2,7 +2,6 @@ import Image from 'next/image';
 import Movie from '../../assets/medium.jpg'
 import { PlayButton } from '../Button'
 import styles from './index.module.css'
-import MovieDesc from './MovieDesc'
 
 function CardMovie() {
   return (
@@ -17,7 +16,6 @@ function CardMovie() {
         hover:scale-110 duration-50 opacity-0 group-hover:opacity-100 `}
         />
       </div>
-      <MovieDesc />
     </div>
   )
 }

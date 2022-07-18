@@ -1,8 +1,8 @@
-export interface Movie { 
+export interface Movie {
   id:string,
+  rank:string,
   title:string,
+  fullTitle:string,
   year:number,
-  category:string,
-  isBookmarked:boolean,
-  
+  image:string
 }

@@ -4,8 +4,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import CardThumbnail from '../CardThumbnail';
+import { Movie } from '../../interfaces';
 
-function Trending() {
+function Trending({ movies }: { movies: Movie[] }) {
   return (
     <div className="w-full">
 
@@ -16,13 +17,11 @@ function Trending() {
         onSlideChange={() => console.log('slide change')}
         onSwiper={(swiper) => console.log(swiper)}
       >
-        <SwiperSlide><CardThumbnail /></SwiperSlide>
-        <SwiperSlide><CardThumbnail /></SwiperSlide>
-        <SwiperSlide><CardThumbnail /></SwiperSlide>
-
-        <SwiperSlide><CardThumbnail /></SwiperSlide>
-        <SwiperSlide><CardThumbnail /></SwiperSlide>
-        <SwiperSlide><CardThumbnail /></SwiperSlide>
+        {
+          (movies || []).slice(0, 5).map((movie) => (
+            <SwiperSlide key={movie.id}><CardThumbnail movie={movie} /></SwiperSlide>
+          ))
+        }
       </Swiper>
     </div>
   )
