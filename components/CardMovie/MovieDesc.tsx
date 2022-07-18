@@ -5,16 +5,16 @@ function MovieDesc({ movie }: {movie: Movie}) {
   console.log(movie)
   return (
     <>
-      <div className="movie-desc flex text-sm">
-        <span className="text-gray-400 font-medium mr-3">{movie.year}</span>
-        <span className="text-gray-400 font-medium mr-3 flex items-center">
+      <div className="movie-desc flex text-lg">
+        <span className="text-gray-300 font-medium mr-3">{movie.year}</span>
+        <span className="text-gray-300 font-medium mr-3 flex items-center">
           <MdLocalMovies />
           {' '}
           Movie
         </span>
         <span className="text-gray-400 font-medium">PG</span>
       </div>
-      <h6 className="text-white font-bold text-xl">{movie.title}</h6>
+      <h6 className="text-white font-bold text-2xl">{movie.title}</h6>
     </>
   )
 }
