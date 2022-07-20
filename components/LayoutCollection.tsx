@@ -4,7 +4,7 @@ function LayoutCollection({ children, title }: { children: React.ReactNode, titl
   return (
 
     <>
-      <h2 className="text-5xl text-white font-bold">{title}</h2>
+      <h2 className="text-5xl text-white font-medium">{title}</h2>
       <section className="py-6">
         {children}
       </section>
