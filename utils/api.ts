@@ -5,7 +5,7 @@ export const getWithoutHeader = (api:string) => {
   return axios(
     api,
     {
-      method: 'GET'
+      method: 'GET' as const
     },
   );
 };
